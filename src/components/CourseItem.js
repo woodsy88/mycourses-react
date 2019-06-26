@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 const CourseItem = ({ data }) => (
 
   <React.Fragment>
     <div className="mt-4">
       <div> 
-        <img className="rounded-lg shadow-md h-64" src={data.img}></img>
+        <img className="rounded-lg shadow-md h-64" src={data.img} alt="" onClick={(e) => console.log(`you clicked me ${data.id}`)
+        }></img>
       </div>
       
       <div className="relative px-4 -mt-16">
@@ -22,19 +25,37 @@ const CourseItem = ({ data }) => (
               <span className="text-gray- 600 text-xs ml-1">{data.currency}</span>
             </div>
             <div className="text-sm text-gray-600 mt-1">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
               <span className="ml-2">34 reviews</span>
             </div>
+            <Link to="/details">Details</Link>
+          <button className="" onClick={() => console.log(`added item ${data.id} to cart`)} disabled={data.inCart ? true : false}>
+            {data.inCart ? 
+              (<span disabled className="font-semibold">Added to List</span>) : 
+              (<i className="fas fa-plus"></i>)
+            }
+          </button>
         </div>
       </div>
     </div>
   </React.Fragment>
 );
 
+CourseItem.propTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.number,
+    img: PropTypes.string,
+    title: PropTypes.string,
+    price: PropTypes.number,
+    inCart: PropTypes.bool
+  }).isRequired
+}
+
 export default CourseItem;
+
 
 /*
 

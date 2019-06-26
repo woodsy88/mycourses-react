@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import { ProductConsumer } from '../context';
 import Logo from './Logo';
 
 
@@ -8,6 +8,12 @@ class Navbar extends Component {
   render() {
     return (
       <React.Fragment>
+        <ProductConsumer>
+          {(value) => {
+             console.log(value);
+             
+          }}
+        </ProductConsumer>
         <header className="bg-gray-900">
           <div className="flex justify-between px-4 py-3">
             <div> 
@@ -15,15 +21,15 @@ class Navbar extends Component {
             </div>
             <div className="flex">
               <button className="px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white">
-                <i class="h-6 w-6 fill-current fas fa-bars "></i>
+                <i className="h-6 w-6 fill-current fas fa-bars "></i>
               </button>
             </div>          
         </div>
           <nav>
             <div className="px-2 pt-2 pb-5 border-b border-gray-800">
-              <Link to='#' class="font-semibold rounded leading-tight text-white px-3 py-1 block hover:bg-gray-800">List a course</Link>
-              <Link to='#' class="mt-2 font-semibold rounded leading-tight text-white px-3 py-1 block hover:bg-gray-800">Courses</Link>
-              <Link to='#' class="mt-2 font-semibold rounded leading-tight text-white px-3 py-1 block hover:bg-gray-800">Messages</Link>
+              <Link to='#' className="font-semibold rounded leading-tight text-white px-3 py-1 block hover:bg-gray-800">List a course</Link>
+              <Link to='#' className="mt-2 font-semibold rounded leading-tight text-white px-3 py-1 block hover:bg-gray-800">Courses</Link>
+              <Link to='#' className="mt-2 font-semibold rounded leading-tight text-white px-3 py-1 block hover:bg-gray-800">Messages</Link>
             </div>
            <div className="px-5 py-5">
               <div className="flex items-center">
