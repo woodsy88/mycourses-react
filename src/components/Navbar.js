@@ -56,7 +56,7 @@ class Navbar extends Component {
        </div>  
           <button className="bg-gray-700 hover:bg-gray-600 focus:outline-none focus:shadow-outline rounded-lg shadow  pr-5 pl-3">
             <i className="h-6 w-6 text-gray-500 fas fa-filter"></i>
-            <span className=" text-white font-light">filters</span>
+            <span className=" text-white font-light">filtersss</span>
           </button>     
       </section>
       </React.Fragment>
