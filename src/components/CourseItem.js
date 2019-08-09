@@ -7,7 +7,7 @@ const CourseItem = ({ data }) => (
   <React.Fragment>
     <div className="mt-4">
       <div> 
-        <img className="rounded-lg shadow-md h-64" src={data.img} alt="" onClick={(e) => console.log(`you clicked me ${data.id}`)
+        <img className="rounded-lg shadow-md h-64" src="#" alt="" onClick={(e) => console.log(`you clicked me ${data.id}`)
         }></img>
       </div>
       
@@ -16,13 +16,13 @@ const CourseItem = ({ data }) => (
           <div>
             <span className="inline-block leading-none bg-teal-200 text-teal-800 font-semibold rounded-full px-1 uppercase tracking-wide text-xs">{data.level}</span>
             <div className="text-xs text-gray-600 font-semibold uppercase tracking-wide">
-              {data.category.tag} &bull; 2 baths
+              {} &bull; 2 baths
             </div>
           </div>
-            <h4 className="mt-1 text-gray-900 font-semibold text-lg">{data.title}</h4>
+            <h4 className="mt-1 text-gray-900 font-semibold text-lg">{}</h4>
             <div className="mt-1">
-              <span className="text-gray-900">${data.price}</span>
-              <span className="text-gray- 600 text-xs ml-1">{data.currency}</span>
+              <span className="text-gray-900">${}</span>
+              <span className="text-gray- 600 text-xs ml-1">{}</span>
             </div>
             <div className="text-sm text-gray-600 mt-1">
               <i className="fas fa-star"></i>
@@ -32,11 +32,8 @@ const CourseItem = ({ data }) => (
               <span className="ml-2">34 reviews</span>
             </div>
             <Link to="/details">Details</Link>
-          <button className="" onClick={() => console.log(`added item ${data.id} to cart`)} disabled={data.inCart ? true : false}>
-            {data.inCart ? 
-              (<span disabled className="font-semibold">Added to List</span>) : 
-              (<i className="fas fa-plus"></i>)
-            }
+          <button className="" >
+            
           </button>
         </div>
       </div>

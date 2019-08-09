@@ -4,7 +4,7 @@ class Details extends Component {
   render() {
     return (
       <div>
-        Hell from detail
+        Hello from detail
       </div>
     );
   }

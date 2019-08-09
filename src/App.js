@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
-import Home from './components/Home';
+
+import Home from "./pages/Home";
 import Default from './components/Default';
 import Navbar from './components/Navbar';
 import Details from "./components/Details";
+import CoursesPage from "./pages/CoursesPage";
+import SingleCourse from "./pages/SingleCourse";
 
 function App() {
   return (
@@ -12,7 +15,8 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/details" component={Details} />
+        <Route exact path="/courses" component={CoursesPage} />
+        <Route exact path="/courses/:slug" component={SingleCourse} />
         <Route component={Default} />
       </Switch>
     </React.Fragment>

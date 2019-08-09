@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
+import Hero from '../components/Hero';
+import Banner from '../components/Banner';
+import {Link} from "react-router-dom";
 
 class Default extends Component {
   render() {
     console.log('default props', this.props);
 
     return (
-      <div>
-        <div className="container">
-          <div className="row">
-            <div className="col-1o text-center mx-auto text-title pt-5 text-uppercase">
-              <h1 className="display-3">404</h1>
-              <h2 className="bg-pink">Page Not Found</h2>
-              <h3>the request url <span className="text-danger">{this.props.location.pathname}</span></h3>
-            </div>
-          </div>
-        </div>
-      </div>
+        <Hero>
+        <Banner title='404' subtitle={`page not found for ${this.props.location.pathname}`}>
+          <Link className="btn-primary" to="/">Go back to home</Link>
+
+          </Banner>
+        </Hero>
     );
   }
 }
