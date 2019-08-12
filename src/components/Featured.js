@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
 import { ProductContext } from '../context';
+import Loading from './Loading';
+import Course from './Course';
+import Title from './Title';
 
 class Featured extends Component {
 
   static contextType = ProductContext;
 
   render() {
-    const {featuredCourses: courses} = this.context;
-    console.log('featured courses', courses);
+    let {loading, featuredCourses: courses} = this.context;
     
-   
+    courses = courses.map(course => {
+      return <Course key={course.id} course={course} />
+    })
     
     return (
-      <div>
-        hello from featured  
-      </div>
+      <section className="featured-rooms">
+        <Title title="featured courses" />
+        {loading ? <Loading /> : courses}
+      </section>
     );
   }
 }

@@ -7,7 +7,8 @@ import Default from './components/Default';
 import Navbar from './components/Navbar';
 import Details from "./components/Details";
 import CoursesPage from "./pages/CoursesPage";
-import SingleCourse from "./pages/SingleCourse";
+import Course from "./components/Course";
+import SingleCourse from './pages/SingleCourse';
 
 function App() {
   return (

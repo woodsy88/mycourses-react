@@ -41,15 +41,15 @@ const CourseItem = ({ data }) => (
   </React.Fragment>
 );
 
-CourseItem.propTypes = {
-  data: PropTypes.shape({
-    id: PropTypes.number,
-    img: PropTypes.string,
-    title: PropTypes.string,
-    price: PropTypes.number,
-    inCart: PropTypes.bool
-  }).isRequired
-}
+// CourseItem.propTypes = {
+//   data: PropTypes.shape({
+//     id: PropTypes.number,
+//     img: PropTypes.string,
+//     title: PropTypes.string,
+//     price: PropTypes.number,
+//     inCart: PropTypes.bool
+//   }).isRequired
+// }
 
 export default CourseItem;
 
