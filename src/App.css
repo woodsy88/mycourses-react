@@ -167,3 +167,115 @@
     width: 100%;
   }
 }
+
+
+/* single course*/
+
+.single-course {
+  padding: 5rem 0 0 0;
+}
+.single-course-images {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
+}
+.single-course-images img {
+  width: 100%;
+  display: block;
+}
+.single-course-info {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2rem auto;
+}
+.desc,
+.info {
+  margin: 1rem 0;
+}
+.desc h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.desc p {
+  line-height: 1.5;
+}
+.info h3,
+.info h6 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+.info h6 {
+  font-weight: 300;
+}
+.course-extras {
+  width: 80vw;
+  margin: 0 auto 3rem auto;
+}
+.course-extras h6 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.extras {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .single-course-images,
+  .single-course-info,
+  .course-extras {
+    width: 95vw;
+    max-width: 1170px;
+  }
+  .single-course-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .info {
+    padding-left: 3rem;
+  }
+}
+/* end of single course*/
+
+.empty-search {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  padding: 1rem;
+  letter-spacing: var(--mainSpacing);
+}
+
+
+/* courselist */
+.courseslist {
+  padding: 5rem 0;
+}
+.courseslist-center {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 30px;
+}
+
+@media screen and (min-width: 776px) {
+  .courseslist-center {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  .courseslist-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+/* end of courselist */
